@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="لینوکس اف‌ام، نخستین رادیوی اینترنتی لینوکس به زبان فارسی">
+
+        <title>LinuxFM.ir | لینوکس اف‌ام</title>
+        <link rel="shortcut icon" href="linuxfm-logo.ico" />
+
+        <link type="text/css" href="script/ui/css/custom-theme/jquery-ui-1.8.9.custom.css" rel="stylesheet" />
+        <link type="text/css" href="script/style.css" rel="stylesheet" />
+
+        <!-- ui -->
+        <script type="text/javascript" src="script/ui/js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="script/script.js"></script>
+        <script type="text/javascript" src="script/ui/js/jquery-ui-1.8.9.custom.min.js"></script>
+        
+        
+        <!-- ****************************************************** -->
+        <script type="text/javascript">
+            $( function() {
+
+                // Accordion
+                $("#accordion").accordion({
+                    header: "h3",
+                    autoHeight: false,
+                    collapsible: true
+                });
+
+            });
+            
+            $(document).ready( function() {
+						
+						if($.browser.msie){
+						     $('#accordion').empty();
+						     var text = 'شما از مرورگر غیر استاندارد اینترنت اکسپلورر استفاده می کنید. تمامی تلاش این رادیوی اینترنتی در راستای گسترش استفاده از نرم افزارهای آزاد و اوپن سورس می باشد. برای همین از شما تقاضا داریم حتی اگر از ویندوز استفاده می کنید لطفن برای نمایش بهتر از مرورگر آزاد فایرفاکس استفاده کنید. همچنین برای پادکست ها ما از فرمت آزاد ogg استفاده کرده ایم که شما در ویندوز قادر به شنیدن این پادکست ها نخواهید بود. برای همین منظور می توانید codec مورد نظر را نیز از داخل دیسک سخت نصب کرده و سپس دوباره فایل index.html را اجرا کنید. برای شنیدن پادکست ها در ویندوز نیز می توانید از vlcPlayer استفاده کنید. این نرم افزارها در شاخه ی software قرار دارند.';
+						     $('#accordion').text(text);
+						}
+
+
+
+                $(".pod").click( function() {
+                    $('#pd').remove();
+                    var mediaUrl = $(this).attr("name");
+                    $('#pl').css('display', 'block');
+                    // $('#playerdiv').css('opacity', '0.5');
+                    // $('#playerdiv').addClass('over');
+                    // $('#player').addClass('playerover');
+                    
+                    $('audio source').attr('src', $(this).attr('name'));
+                    // $(this).after($('#pl'));
+                    // $('#playerdiv audio').addClass('playerover');
+                    //alert($(this).attr('name'));
+                    //alert(mediaUrl);
+                    var player = "<div id='pd'><audio controls='true' style='margin: 10px 190px;' >\
+                                        <source src='" + $(this).attr('name') + "' type='audio/ogg' />\
+                                  </audio></div>";
+                    $(this).after(player);
+                });
+
+					$('#link').click(function(){
+					     window.location.replace($(this).attr('href'));
+					});
+
+            });
+            
+
+        </script>
+    </head>
+    <body>
+
+               <!-- <audio controls="true" >
+                <source src="media/old/01/Mmoghadam-moarefi.ogg" type="audio/ogg"></source>
+              </audio>    -->           
+
+
+        
+        
+        <div id="accordion">
+            <div>
+                <h3><a href='#'>یک سالگی لینوکس اف ام</a></h3>
+                <div>
+                    لینوکس اف ام حاصل یک کار گروهی ست. کارگروهی در کشوری که همه مردم آن به این باور کاذب رسیده اند که کارگروهی در کشورشان بی معنی ست. کاری حاصل تلاس تمامی کسانی که با عشق و امید به آینده به فردایی بهتر چشم دوخته اند.
+                    <!-- <embed src="script/podcast/1/files/1-Mmoghadam-moarefi.mp3" HEIGHT='60' WIDTH='144' /> -->
+                    <br />
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='1'>پادکست شماره ۱<span>جادی - بهروز شعبانی - فرید احمدیان و پژمان مقدم - سر اسلکر - مهدی مقدم</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a class='pod' name='media/old/01/Mmoghadam-moarefi.ogg' href='#1'>
+                            مهدی مقدم و معرفی لینوکس اف‌ام
+                            <!-- <embed src="script/podcast/1/files/1-Mmoghadam-moarefi.mp3" HEIGHT='60' WIDTH='144' /> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#1' class='pod' name='media/old/01/Jadi-news.ogg'>
+                            اخبار لینوکس - جادی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#1' class='pod' name='media/old/01/behroozShabani-barkhorde manteghi ba moshkelate linux.ogg'>
+                            روش های اصولی برخورد با مشکل در لینوکس - بهروز شعبانی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#1' class='pod' name='media/old/01/Pmoghadam-mosahebe.ogg'>
+                            مصاحبه فرید احمدیان با مهندس پژمان مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#1' class='pod' name='media/old/01/sirSlaker-moarefi barname ayande.ogg'>
+                            آشنایی با قسمتی از برنامه های آینده لینوکس اف‌ام - سر اسلاکر
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='2'>پادکست شماره ۲<span>مصاحبه فرید احمدیان و بردیا دانشور - بهروز شعبانی - روزبه شفیعی - ایرج اسدی - سینا سعیدی</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#2' class='pod' name='media/old/02/Iraj-moarefi barnameha.ogg'>
+                            معرفی برنامه ها - ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#2' class='pod' name='media/old/02/sinaSaidi-gharardade novel&microsoft.ogg'>
+                            قرارداد ناول و مایکروسافت - سینا سعیدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#2' class='pod' name='media/old/02/roozbehShafii-enetaf(Arch).ogg'>
+                            انعطاف ۱ - روزبه شفیعی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#2' class='pod' name='media/old/02/behroozShabani-news.ogg'>
+                            اخبار - بهروز شعبانی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#2' class='pod' name='media/old/02/mosahebe-bardiaDaneshvar (silicon).ogg'>
+                            مصاحبه - فرید احمدیان و بردیا دانشور
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='3'>پادکست شماره ۳<span>فرید احمدیان و  ایریکس - مهدی مقدم - بهروز شعبانی - مهدی مشتاقی - جادی و ایریکس - ایرج اسدی</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#3' class='pod' name='media/old/03/IrajAsadi-moarefiBarname.ogg'>
+                            معرفی برنامه ها - ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#3' class='pod' name='media/old/03/Jadi&irix-news.ogg'>
+                            اخبار - جادی و ایریکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#3' class='pod' name='media/old/03/MehdiMoshtaghi-ghalebhayeKariPrograming.ogg'>
+                            فریم ورک های برنامه نویسی - مهدی مشتاقی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#3' class='pod' name='media/old/03/behroozShabani-GameInLinux.ogg'>
+                            بازی در لینوکس - بهروز شعبانی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#3' class='pod' name='media/old/03/MMOghadam-MoarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#3' class='pod' name='media/old/03/mosahebe-Irix.ogg'>
+                            مصاحبه - فرید احمدیان و  ایریکس
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='4'>پادکست شماره ۴<span>فرید احمدیان با مهرداد مومنی - مهدی مقدم - بهروز شعبانی - روزبه شفیعی - جادی و ایریکس - ایرج اسدی</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#4' class='pod' name='media/old/04/IrajAsadi-moarefiBarname.ogg'>
+                            معرفی برنامه ها- ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#4' class='pod' name='media/old/04/Jadi&Irix-news.ogg'>
+                            اخبار - جادی و ایریکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#4' class='pod' name='media/old/04/RoozbehShafii-enetaf2.ogg'>
+                            انعطاف ۲ - روزبه شفیعی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#4' class='pod' name='media/old/04/BehroozShabani-mojavezhayeAzad.ogg'>
+                            مجوزهای آزاد - بهروز شعبانی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#4' class='pod' name='media/old/04/Mmoghadam-moarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#4' class='pod' name='media/old/04/Mosahebe-MehrdadMomeni.ogg'>
+                            مصاحبه - فرید احمدیان و مهرداد مومنی
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='5'>پادکست شماره ۵<span>ایرج اسدی - جادی و ایریکس - مهدی مشتاقی - گیلان لاگ - فرید احمدیان و آقای مهاجری</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#5' class='pod' name='media/old/05/IrajAsadi-moarefiBarname.ogg'>
+                            معرفی برنامه ها- ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#5' class='pod' name='media/old/05/Jadi&iiiriiix-news.ogg'>
+                            اخبار - جادی و ایریکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#5' class='pod' name='media/old/05/MMoshtaghi-framworks.ogg'>
+                            فریم ورک های برنامه نویسی ۲ - مهدی مشتاقی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#5' class='pod' name='media/old/05/GilanLUG-ashenaii.ogg'>
+                            گیلان لاگ و آشنایی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#5' class='pod' name='media/old/05/Mosahebe-mohajeri-ASDP.ogg'>
+                            مصاحبه - فرید احمدیان و آقای مهاجری (مدیر ISDP)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='6'>پادکست شماره ۶<span>ایرج اسدی - فرید احمدیان - روزبه شفیعی - مهدی مقدم - بهروز شعبانی و بهداد اسفهبد</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#6' class='pod' name='media/old/06/IrajAsadi-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#6' class='pod' name='media/old/06/Farid-sohbatiChand.ogg'>
+                            صحبتی کوتاه راجع به لینوکس اف ام و … - فرید احمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#6' class='pod' name='media/old/06/RoozbehShafii-enetaf.ogg'>
+                            انعطاف ۳ - روزبه شفیعی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#6' class='pod' name='media/old/06/MMoghadam-MoarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#6' class='pod' name='media/old/06/BehroozShabani-Mosahebe-BehdadEsfahbod.ogg'>
+                            مصاحبه - بهروز شعبانی و بهداد اسفهبد
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='7'>پادکست شماره ۷<span>ایرج اسدی - فرید احمدیان - مهدی مقدم - بهروز شعبانی و  احسان اخگری</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#7' class='pod' name='media/old/07/IrajAsadi-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#7' class='pod' name='media/old/07/Farid-sohbati-Chand.ogg'>
+                            صحبتهایی راجع به آینده لینوکس اف ام و تغییرات در پیش رو - فرید احمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#7' class='pod' name='media/old/07/MMOghadam-MoarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#7' class='pod' name='media/old/07/BehroozShabani-Mosahebe-EhsanAkhgari.ogg'>
+                            مصاحبه - بهروز شعبانی و  احسان اخگری
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='8'>پادکست شماره ۸<span>فرید احمدیان و مهدی حسن پور - روزبه شفیعی - مهدی مقدم - ایرج اسدی</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#8' class='pod' name='media/old/08/1-linuxfm-8-hgh.ogg'>
+                            معرفی برنامه ها- ایرج اسدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#8' class='pod' name='media/old/08/2-linuxfm-8-MehdiK3B.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#8' class='pod' name='media/old/08/3-linuxfm-8-rosha.ogg'>
+                            انعطاف اوبونتویی - روزبه شفیعی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#8' class='pod' name='media/old/08/4-linuxfm-8-faridinterv.ogg'>
+                            مصاحبه - فرید احمدیان و مهدی حسن پور
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#8' class='pod' name='media/old/08/5-linuxfm-8-erghezi.ogg'>
+                              لانچ پد - آقای ارقزی
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='9'>پادکست شماره ۹<span>سر اسلاکر - روزبه شفیعی - جادی و ایریکس - روزبه شفیعی</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#9' class='pod' name='media/old/09/start.ogg'>
+                            معرفی برنامه ها - روزبه شفیعی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#9' class='pod' name='media/old/09/Jadi&iiiriiix-News.ogg'>
+                            اخبار - جادی و ایریکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#9' class='pod' name='media/old/09/RoozbehShafii-enetaf.ogg'>
+                            انعطاف ۴ - روزبه شفیعی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#9' class='pod' name='media/old/09/SirSlacker-MoarefiSlackware.ogg'>
+                            معرفی توزیع اسلاکویر و نحوه نصب آن - سر اسلاکر
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='10'>پادکست شماره ۱۰<span>ایرج اسدی - جادی و ایریکس - مهدی مشتاقی - مهدی مقدم</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#10' class='pod' name='media/old/10/IrajAsadi-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- ایرج اسدی
+                            <br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#10' class='pod' name='media/old/10/Jadi&iiiriiix-News.ogg'>
+                            اخبار - جادی و ایریکس
+                            <br>
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#10' class='pod' name='media/old/10/MMoshtaghi-Pardos.ogg'>
+                            معرفی توزیع پاردوس - مهدی مشتاقی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#10' class='pod' name='media/old/10/MMoghadam-MoarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='11'>پادکست شماره ۱۱<span>فرید احمدیان - نارسیس لینوکس - مهدی مقدم - مصطفی فریدی - فریداحمدیان و امیل صدق</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#11' class='pod' name='media/old/11/Farid-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- فرید احمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#11' class='pod' name='media/old/11/Narsislinux-LUG.ogg'>
+                            لاگ - نارسیس لینوکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#11' class='pod' name='media/old/11/MMoghadam-MoarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#11' class='pod' name='media/old/11/MostafaFaridi-BSDNews.ogg'>
+                            اخبار BSD - مصطفی فریدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#11' class='pod' name='media/old/11/Farid-Mosahebe-EmilSedgh.ogg'>
+                            مصاحبه - فرید احمدیان و امیل صدق
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='12'>پادکست شماره ۱۲<span>فرید احمدیان - مصطفی فریدی - مهدی مقدم</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#12' class='pod' name='media/old/12/Farid-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- فرید احمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#12' class='pod' name='media/old/12/MostafaFaridi-BSDNews.ogg'>
+                            اخبار BSD - مصطفی فریدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#12' class='pod' name='media/old/12/MMoghadam-MoarefiNarmafzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='13'>پادکست شماره ۱۳<span>فریداحمدیان و جلال حاج غلامعلی - مهدی مقدم - مصطفی فریدی - نارسیس لینوکس - هاشم ولف - جادی و ایریکس - </span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/Farid-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- فرید احمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/Jadi&iiiriiix-News.ogg'>
+                            اخبار - جادی و ایریکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/HashemWolf-virus&antivirus.ogg'>
+                            امنیت - هاشم ولف
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/NarcicLinux-LUG.ogg'>
+                            لاگ ۲ - نارسیس لینوکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/MostafaFaridi-BSDNews.ogg'>
+                            اخبار BSD - مصطفی فریدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/MMoghadam-MoarefiNarmAfzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#13' class='pod' name='media/old/13/Farid-Mosahebe-Hajgholamali.ogg'>
+                            مصاحبه - فریداحمدیان و جلال حاج غلامعلی
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='14'>پادکست شماره ۱۴<span>فریداحمدیان و آلن باغومیان - مصطفی فریدی - هاشم ولف - مهدی مقدم - مهدی هنرمند</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#14' class='pod' name='media/old/14/MHonarmanJ-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- مهدی هنرمند
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#14' class='pod' name='media/old/14/MMoghadam-MoarefiNarmAfzar.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#14' class='pod' name='media/old/14/HashemWolf-Amniyat.ogg'>
+                            امنیت ۲ - هاشم ولف
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#14' class='pod' name='media/old/14/MostafaFaridi-BSDNews.ogg'>
+                            اخبار BSD - مصطفی فریدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#14' class='pod' name='media/old/14/Farid-Mosahebe-AlenBaghoomian.ogg'>
+                            مصاحبه - فریداحمدیان و آلن باغومیان
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='15'>پادکست شماره ۱۵<span>فریداحمدیان - علی یوسفی سبزوار - مصطفی فریدی - مهدی مقدم - مهدی هنرمند - لمپ در زنجان</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/M_Honarmand.ogg'>
+                            معرفی برنامه ها- مهدی هنرمند
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/Farid_1.ogg'>
+                            گزارش همایش سراسری LAMP در زنجان فسمت اول - فریداحمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/AY_sabzevar_1.ogg'>
+                            بررسی تو زیع فدورا - علی یوسفی سبزوار
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/M_Moqadam.ogg'>
+                            معرفی نرم افزار - مهدی مقدم
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/BSD_News_By_m.faridi.ogg'>
+                            اخبار BSD - مصطفی فریدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/AY_sabzevar_2.ogg'>
+                            بررسی تو زیع فدورا ۱۳ - علی یوسفی سبزوار
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#15' class='pod' name='media/old/15/Farid_2.ogg'>
+                            گزارش همایش سراسری LAMP در زنجان  فسمت دوم - فریداحمدیان
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='16'>پادکست شماره ۱۶<span> لمپ در زنجان - امیر مسعود پور موسی - نارسیس لینوکس - هاشم ولف - مصطفی فریدی - جادی و ایریکس - مهدی هنرمند</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/introduction.ogg'>
+                            معرفی برنامه ها- مهدی هنرمند
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/news.ogg'>
+                            اخبار - جادی و ایریکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/zconf-1.ogg'>
+                            گزارش همایش سراسری LAMP در زنجان  فسمت اول
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/bsd.ogg'>
+                            اخبار BSD - مصطفی فریدی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/backtrack.ogg'>
+                            معرفی توزیع امنیتی backtrack - هاشم ولف
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/lug.ogg'>
+                            لاگ ۳ - نارسیس لینوکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/zpersian.ogg'>
+                            معرفی زی پرشین - امیر مسعود پور موسی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#16' class='pod' name='media/old/16/zconf-2.ogg'>
+                            گزارش همایش سراسری LAMP در زنجان  فسمت دوم
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='17'>پادکست شماره ۱۷<span>علیرضا مسرورخواه - میثم بصیرت - هاشم ولف - فرید احمدیان</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#17' class='pod' name='media/old/17/Farid-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- فرید احمدیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#17' class='pod' name='media/old/17/HashemWolf-Firewall.ogg'>
+                            معرفی توزیع های فایروالی - هاشم ولف
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#17' class='pod' name='media/old/17/MBasirat-MoarefiNarmAfzar.ogg'>
+                            معرفی چند برنامه لینوکسی - میثم بصیرت
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#17' class='pod' name='media/old/17/AMasroorkhah-JavainLinux.ogg'>
+                            معرقی جاوا در لینوکس - علیرضا مسرورخواه
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='18'>پادکست شماره ۱۸<span>علیرضا مسرورخواه - هاشم ولف - گیلان لاگ - مهدی هنرمند</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#18' class='pod' name='media/old/18/MHonarmandJ-MoarefiBarname.ogg'>
+                            معرفی برنامه ها- مهدی هنرمند
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#18' class='pod' name='media/old/18/Gozaresh-GilanLUG-RoozeAzadiNarmAfzar.ogg'>
+                            گزارش از گیلان لاگ و روز نرم افزار های  آزاد
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#18' class='pod' name='media/old/18/HashemWolf-Firewall2.ogg'>
+                            معرفی توزیع های فایروالی ۲ - هاشم ولف
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#18' class='pod' name='media/old/18/ARMasroorKhah-Python.ogg'>
+                            معرفی پایتون - علیرضا مسرورخواه
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='n'>پادکستها در سیستم جدید<span>نسخه جدید سایت</span></a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/1.ogg'>
+                            افتتاح نسخه جدید سایت
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/2.ogg'>
+                            برنامه لاگ و گزارش روز آزادی نرم افزار ( سمینار )
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/3.ogg'>
+                            برنامه لاگ و گزارش روز آزادی نرم افزار ( مصاحبه )
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/4.ogg'>
+                            معرفی زبان برنامه نویسی پرل
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/5.ogg'>
+                            روتر لینوکسی
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/6.ogg'>
+                            معرفی نرم افزار
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/7.ogg'>
+                            تازه ها در لینوکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/8.ogg'>
+                            پارادوکس انتخاب
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/9.ogg'>
+                            برنامه لاگ
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/10.ogg'>
+                            برنامه لاگ , خبر و گزارش از مشهد
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/11.ogg'>
+                            گزارش از حضور لاگ گیلان(GULLUG) در فارام ۸۹
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/12.ogg'>
+                            ۲ توزیع جدید از گیلان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/13.ogg'>
+                            معرفی وب سایت GULLUG.or
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/14.ogg'>
+                            باز گرداندن پسورد در دبیان
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/15.ogg'>
+                            نرم افزار های تبدیل فرمت در لینوکس
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/16.ogg'>
+                            مصاحبه با اقای هدایت وطن خواه
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/17.ogg'>
+                            اخبار دنیای متن باز
+                            </a>
+                        </li>
+                        <li>
+                            <a href='#n' class='pod' name='media/new/18.ogg'>
+                            برنامه لاگ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3><a href='#' id='how'>چگونه برای لینوکس اف ام برنامه بسازیم</a></h3>
+                <div>
+                    <ul>
+                        <li>
+                            <div class="entry">
+										<a href='#n' class='pod' name='media/new/19.ogg'>روش تهیه ی پادکست</a>
+                                        <p>همانطور که می‌دانید و بارها 
+در برنامه‌های رادیو اعلام شده است، شروع پروژه رادیو لینوکس‌ اف‌ام با 
+چندین شخص خاص بود و بقای آن بدست مخاطبین است. اما شاید این سوال برای 
+برخی پیش آید که چگونه می‌توانند به بقای لینوکس اف‌ام و بهبود وضعیت کیفی 
+آن کمک کنند! ما در زیر چندین راه مشخص را به شما پیشنهاد می‌دهیم! شما هم 
+سعی کنید راه‌های خلاقانه خود را به ان اضافه کنید و در لینوکس اف‌ام شریک 
+شوید!</p>
+<ul>
+<li> اگر فکر می‌کنید موضوع جالبی در ذهن دارید که قابلیت پادکست شدن را دارد، به ما بگوئید تا به ان موضوع بپردازیم.</li>
+<li> اگر فکر می‌کنید محتوای مناسب برای پادکست را دارید، آن را به ما دهید، تا پادکست را تولید کنیم!</li>
+<li> حتی اگر توانایی ساخت و تنظیم یک پادکست (در سطح معمول) را دارید آن را با صدای خود بسازید و ان را در لینوکس اف‌ام منتشر کنید.</li>
+<li> حتی شما می‌توانید بصورت دوره‌ای با ما کار کنید، و یکی از برنامه‌سازان اصلی لینوکس اف‌ام باشید.</li>
+</ul>
+<p>برای ایجاد ارتباط با ایمیل cooperation [AT] linuxfm [DOT] com تماس بگیرید.</p>
+                                        <p>لیست افکت های صوتی برای ساخت برنامه :
+                                          <li><a href='media/effects/1/'>افکت های شماره ی یک</a></li>
+                                          <li><a href='media/effects/2/'>افکت های شماره ی دو</a></li>
+                                          <li><a href='media/effects/3/'>افکت های شماره ی سه</a></li>
+                                          <li><a href='media/effects/4/'>افکت های شماره ی چهار</a></li>
+                                          <li><a href='media/effects/5/'>افکت های شماره ی پنج</a></li>
+                                          <li><a href='media/effects/6/'>افکت های شماره ی شش</a></li>
+                                          <li><a href='media/effects/7/'>افکت های شماره ی هفت</a></li>
+                                          <li><a href='media/effects/LinuxFM_effect.ogg'>لوگوی لینوکس اف ام</a></li>
+
+                                          </p>
+        </div> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!--            <div align="center">
+<a href="http://www.sito.ir" alt="مرکز گنو/لینوکس سی‌تو"><img src="linux-is-not-operating-system.jpg" border="0" style="border: 1px solid #000000;border-radius: 10px 10px 10px 10px;"></a>-->
+<!--
+                <h3><a href='http://linuxfm.sito.ir/'>حمایت از لینوکس اف ام</a></h3>
+                <div>
+                    <ul>
+                        <li>  برای حمایت از لینوکس اف ام می توانید به فروشگاه اینترنتی 
+                            <a href='http://linuxfm.sito.ir/' >سی تو</a>مراجعه کنید و محصولاتی را که برای حمایت از لینوکس اف ام در سایت قرار داده شده اند بخرید.
+                        </li>
+                    </ul>
+                </div>
+
+            </div><br /><br />
+           <center> <a href='http://linuxfm.com/'>LinuxFM</a></center>
+        </div>
+-->        
+
+    </body>
+</html>

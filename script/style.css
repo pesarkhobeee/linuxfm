@@ -1,0 +1,76 @@
+@import url(fontiran.css);
+body {
+    background: url(../img/bg.jpg) top center no-repeat;
+    font-family: 'dana','iranian sans' !important;
+    direction: rtl;
+}
+h3 {
+    /*  width: 800px !important;*/
+}
+.ui-accordion-content {
+
+}
+#accordion {
+    width: 800px;
+    margin: 162px auto;
+    font: 80% 'dana' !important;
+}
+ul {
+    list-style: none;
+    font-size: 14px;
+    color: #0D3349;
+}
+/*li:nth-child(even) > a {
+color: #710909;
+padding: 2px;
+
+}
+*/
+h3 a span {
+    color: #ccc;
+    padding-right: 10px;
+    font-size:10px;
+    /*  display: compact;*/
+}
+
+
+#player {
+    margin: 0 auto;
+    width: 750px;
+}
+li > a {
+    text-decoration: none;
+    color: #006699 !important;
+}
+li > a:hover {
+    text-shadow: 0 0 3px #555;
+}
+
+/*.over {
+    -moz-background-clip:border;
+    -moz-background-inline-policy:continuous;
+    -moz-background-origin:padding;
+    background-attachment:scroll;
+    background-color:#000000;
+    background-image:none;
+    background-position:0 0;
+    background-repeat:repeat;
+    display:block;
+    height:1600px;
+    left:0;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index: 10000px;
+}*/
+
+.playerover{
+/*    position:absolute;
+    top:100;
+    z-index: 20000px;
+    margin: 0 auto;
+    display: compact;*/
+}
+#pl{
+  display: none;
+}
