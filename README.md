@@ -9,7 +9,7 @@ Live site: https://pesarkhobeee.github.io/linuxfm/
 - `index.html` – single-page site listing every episode and its segments
 - `script/` – styles, fonts, jQuery UI and the jPlayer podcast widget
 - `img/` – menu and background images
-- `media/` – podcast audio (`old/<episode>/*.ogg`, `new/*.ogg`); not stored in this repository because of size
+- `media/` – podcast audio (`old/<episode>/*.ogg`, `new/*.ogg`), re-encoded from the originals to 32 kbps mono Opus to fit GitHub Pages limits
 
 ## Local preview
 

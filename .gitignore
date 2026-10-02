@@ -1,9 +1,6 @@
 .DS_Store
 Thumbs.db
 
-# Podcast audio (1.1 GB) exceeds the 1 GB GitHub Pages site limit; hosted separately
-media/old/
-media/new/
 
 # Third-party background music, not redistributable
 media/effects/
